@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import Hello from "./components/Hello/index";
-
+import CoverageAnalysis from "./containers/CoverageAnalysis/index";
 
 let app = document.getElementById("app");
 
-ReactDOM.render(<Hello name="world"/>, app);
+ReactDOM.render(<CoverageAnalysis/>, app);
