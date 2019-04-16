@@ -1,0 +1,15 @@
+.form {
+    &__field {
+        margin: 15px 0;
+    }
+
+    &__label {
+        font-weight: bold;
+        display: inline-block;
+        min-width: 10em;
+    }
+
+    &__input {
+        max-width: 250px;
+    }
+}
