@@ -9,16 +9,20 @@ describe("<CoverageForm />", function() {
   const KIDS_NUMBER = 2;
   const ZIP_CODE = "abcd";
 
+  let submitted;
+
+  beforeEach(() => {
+    submitted = jest.fn();
+  });
 
   it("should have no salary by default", () => {
-    const coverageForm = shallow(<CoverageForm submitted={() => {}} />);
+    const coverageForm = shallow(<CoverageForm submitted={submitted} />);
 
     expect(coverageForm).toHaveState("salary", 0);
   });
 
   it("should submit the entered Abf", () => {
-    let submittedAbf;
-    const coverageForm = shallow(<CoverageForm submitted={(abf: Abf) => submittedAbf = abf} />);
+    const coverageForm = shallow(<CoverageForm submitted={submitted} />);
 
     coverageForm.find("#salary").simulate("change", { currentTarget: { value: SALARY } });
     coverageForm.find("#kids").simulate("change", { currentTarget: { value: KIDS_NUMBER } });
@@ -26,6 +30,6 @@ describe("<CoverageForm />", function() {
     coverageForm.find("#coverageForm").simulate("submit", { preventDefault: () => {} });
 
     const expectedAbf = new Abf(SALARY, KIDS_NUMBER, ZIP_CODE);
-    expect(submittedAbf).toEqual(expectedAbf);
+    expect(submitted).toHaveBeenCalledWith(expectedAbf);
   });
 });
