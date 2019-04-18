@@ -55,7 +55,7 @@ class CoverageForm extends React.Component<CoverageFormProps, CoverageFormState>
         return (
             <>
                 <h2 className={classes.title}>Explain your situation</h2>
-                <form onSubmit={e => this.submitAbf(e)}>
+                <form id="coverageForm" onSubmit={e => this.submitAbf(e)}>
                     <div className={formClasses.form__field}>
                         <label className={formClasses.form__label} htmlFor="salary">Salary</label>
                         <input className={formClasses.form__input} id="salary" type="numeric" value={salary} onChange={e => this.handleSalaryChange(e)}/>
