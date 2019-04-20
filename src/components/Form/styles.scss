@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__fieldset {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  &__input {
+    padding: 10px;
+    margin: 5px;
+    border: 0;
+    background-color: rgb(220, 220, 220);
+  }
+
+  &__textarea {
+    padding: 10px;
+    margin: 5px;
+    border: 0;
+    background-color: rgb(220, 220, 220);
+  }
+
+  &__submit {
+    padding: 10px;
+    margin: 5px;
+    border: 0;
+    background-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__error {
+    color: red;
+  }
+}

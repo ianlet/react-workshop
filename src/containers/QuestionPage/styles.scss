@@ -1,0 +1,12 @@
+.questionPage {
+  display: flex;
+  flex-direction: row;
+
+  &__list {
+    flex: 1;
+  }
+
+  &__form {
+    width: 500px;
+  }
+}

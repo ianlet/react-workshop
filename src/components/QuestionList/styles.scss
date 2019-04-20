@@ -1,0 +1,25 @@
+.questionList {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    border: 1px solid black;
+  }
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+}
