@@ -1,12 +1,12 @@
 import React from "react";
-import classes from "./styles.scss";
+import styles from "./styles.scss";
 
 interface HelloProps {
-    name: String;
+    name: string;
 }
 
 const Hello = ({name}: HelloProps) => (
-  <div className={classes.hello}>Hello, {name}!</div>
+  <div className={styles.hello}>Hello, {name}!</div>
 );
 
 export default Hello;
